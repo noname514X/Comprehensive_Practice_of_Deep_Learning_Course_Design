@@ -99,14 +99,16 @@ RAG 检索默认 `top_k=3`。前端会展示每个引用片段的来源、章节
 
 当前系统主要风险有三类。第一，规则意图识别对表达方式敏感，例如用户同时说“快递没到还要退货”时可能需要多意图处理；第二，TF-IDF 对语义相似但字面差异很大的问题召回能力有限，例如“泡水运动耳塞”不一定能召回“游泳耳机”；第三，模拟工具没有真实业务后台，订单和工单只是演示数据。改进方向是引入语义向量模型、使用 LLM 输出 JSON 做意图识别、增加多意图拆解，并接入真实订单接口。
 
-## 六、两人分工
+## 六、四人分工
 
 | 成员 | 分工内容 | 产出 |
 | --- | --- | --- |
-| 成员 A | 选题分析、知识库构建、RAG 检索、意图识别、评估脚本、实验分析 | `data/knowledge/`、`vector_store.py`、`intent.py`、`run_evaluation.py`、实验报告 |
-| 成员 B | Web 界面、工具调用、SQLite 记忆、后端 API、README、答辩演示流程 | `static/`、`tools.py`、`memory.py`、`web.py`、README 和演示脚本 |
+| 成员 A | 选题分析、需求分析、知识库构建、RAG 检索 | `data/knowledge/`、`vector_store.py`、`knowledge_base.py` |
+| 成员 B | 意图识别、Agent 路由、Function Calling、情绪兜底 | `intent.py`、`tools.py` |
+| 成员 C | Web 界面、SQLite 记忆、多轮状态维护、后端 API、演示流程 | `static/`、`memory.py`、`web.py`、`app.py` |
+| 成员 D | 评估脚本、RAG 消融实验、实验分析、README、报告统筹 | `run_evaluation.py`、`run_rag_ablation.py`、实验报告、README |
 
-两位成员共同完成系统联调、报告撰写和答辩排练。答辩时成员 A 重点讲背景、技术原理和实验结果；成员 B 重点讲系统架构、功能演示和工程实现。
+四位成员共同完成系统联调、报告撰写和答辩排练。答辩时成员 A 重点讲背景、技术原理和 RAG；成员 B 重点讲意图路由和工具调用；成员 C 重点讲记忆系统和功能演示；成员 D 重点讲实验评估和总结展望。
 
 ## 七、总结与心得
 
