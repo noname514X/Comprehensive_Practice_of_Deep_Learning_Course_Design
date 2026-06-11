@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SmartCare 智能客服</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">SC</span>
+          <div>
+            <h1>SmartCare</h1>
+            <p>耳机售后智能客服</p>
+          </div>
+        </div>
+
+        <section class="panel">
+          <h2>演示场景</h2>
+          <button class="scenario" data-message="订单号 2024060112345 到哪了？">查物流</button>
+          <button class="scenario" data-message="订单 2024060112345 的 XX 耳机左耳没声音，我想换货">退换货</button>
+          <button class="scenario" data-message="XX 耳机防水吗？能戴着游泳吗？">RAG 产品问答</button>
+          <button class="scenario" data-message="你们这什么破服务，再不处理我就投诉了！">情绪安抚</button>
+          <button class="scenario" data-message="XX 和 YY 两款耳机有什么区别？">产品对比</button>
+        </section>
+
+        <section class="panel metrics">
+          <h2>运行统计</h2>
+          <dl>
+            <div><dt>消息数</dt><dd id="metricMessages">0</dd></div>
+            <div><dt>会话数</dt><dd id="metricSessions">0</dd></div>
+            <div><dt>工单数</dt><dd id="metricTickets">0</dd></div>
+          </dl>
+        </section>
+
+        <button id="resetBtn" class="secondary-button">清空当前会话</button>
+      </aside>
+
+      <main class="chat-area">
+        <header class="topbar">
+          <div>
+            <h2>客服对话</h2>
+            <p id="healthText">正在加载知识库...</p>
+          </div>
+          <span class="status-dot">在线</span>
+        </header>
+
+        <div id="messages" class="messages"></div>
+
+        <form id="chatForm" class="composer">
+          <input id="messageInput" autocomplete="off" placeholder="输入订单、售后或产品问题" />
+          <button type="submit">发送</button>
+        </form>
+      </main>
+
+      <aside class="inspector">
+        <section class="panel">
+          <h2>本轮路由</h2>
+          <div id="traceBox" class="trace empty">等待对话输入</div>
+        </section>
+        <section class="panel">
+          <h2>工具调用</h2>
+          <pre id="toolBox" class="code-box">暂无</pre>
+        </section>
+        <section class="panel">
+          <h2>引用来源</h2>
+          <div id="citationBox" class="citations empty">暂无引用</div>
+        </section>
+      </aside>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

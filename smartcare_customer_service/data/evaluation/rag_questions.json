@@ -1,0 +1,34 @@
+[
+  {
+    "question": "XX 耳机防水吗？可以戴着游泳吗？",
+    "expected_sources": ["product_xx_airbuds.md", "faq.md"]
+  },
+  {
+    "question": "YY 游泳耳机使用后怎么清洁？",
+    "expected_sources": ["product_yy_swim.md"]
+  },
+  {
+    "question": "CC 降噪耳机适合通勤吗？",
+    "expected_sources": ["product_cc_noise_canceling.md", "faq.md"]
+  },
+  {
+    "question": "七天无理由退货需要满足什么条件？",
+    "expected_sources": ["after_sales_policy.md", "faq.md"]
+  },
+  {
+    "question": "订单显示签收但我没收到怎么办？",
+    "expected_sources": ["logistics_policy.md", "faq.md"]
+  },
+  {
+    "question": "用户很生气时客服怎么处理？",
+    "expected_sources": ["service_workflow.md", "faq.md"]
+  },
+  {
+    "question": "XX 和 YY 两款耳机有什么区别？",
+    "expected_sources": ["product_yy_swim.md", "faq.md"]
+  },
+  {
+    "question": "发票丢了还能保修吗？",
+    "expected_sources": ["faq.md", "after_sales_policy.md"]
+  }
+]

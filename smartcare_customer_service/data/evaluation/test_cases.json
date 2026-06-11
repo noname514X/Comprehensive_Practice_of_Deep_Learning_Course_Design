@@ -1,0 +1,162 @@
+[
+  {
+    "id": "T01",
+    "session_id": "eval-order",
+    "message": "订单号 2024060112345 到哪了？",
+    "expected_intent": "order_status",
+    "expected_tool": "query_order",
+    "scenario": "查物流"
+  },
+  {
+    "id": "T02",
+    "session_id": "eval-order",
+    "message": "帮我查一下 2024060312347",
+    "expected_intent": "order_status",
+    "expected_tool": "query_order",
+    "scenario": "查物流"
+  },
+  {
+    "id": "T03",
+    "session_id": "eval-missing-order",
+    "message": "我的快递为什么一直没更新？",
+    "expected_intent": "order_status",
+    "expected_tool": null,
+    "scenario": "缺少参数"
+  },
+  {
+    "id": "T04",
+    "session_id": "eval-after-sale",
+    "message": "订单 2024060112345 的 XX 耳机左耳没声音，我想换货",
+    "expected_intent": "return_exchange",
+    "expected_tool": "create_ticket",
+    "scenario": "退换货"
+  },
+  {
+    "id": "T05",
+    "session_id": "eval-after-sale",
+    "message": "订单 2024060212346 我想退货退款",
+    "expected_intent": "return_exchange",
+    "expected_tool": "create_ticket",
+    "scenario": "退换货"
+  },
+  {
+    "id": "T06",
+    "session_id": "eval-after-sale-missing",
+    "message": "我买的耳机坏了",
+    "expected_intent": "return_exchange",
+    "expected_tool": null,
+    "scenario": "缺少参数"
+  },
+  {
+    "id": "T07",
+    "session_id": "eval-rag-xx",
+    "message": "XX 耳机防水吗？",
+    "expected_intent": "product_info",
+    "expected_tool": null,
+    "scenario": "RAG 问答"
+  },
+  {
+    "id": "T08",
+    "session_id": "eval-rag-xx",
+    "message": "能戴着游泳吗？",
+    "expected_intent": "product_info",
+    "expected_tool": null,
+    "scenario": "追问"
+  },
+  {
+    "id": "T09",
+    "session_id": "eval-rag-yy",
+    "message": "YY 游泳耳机多少钱？",
+    "expected_intent": "product_info",
+    "expected_tool": null,
+    "scenario": "RAG 问答"
+  },
+  {
+    "id": "T10",
+    "session_id": "eval-compare",
+    "message": "XX 和 YY 两款耳机有什么区别？",
+    "expected_intent": "product_info",
+    "expected_tool": "compare_products",
+    "scenario": "工具对比"
+  },
+  {
+    "id": "T11",
+    "session_id": "eval-warranty",
+    "message": "耳机保修多久？",
+    "expected_intent": "warranty",
+    "expected_tool": null,
+    "scenario": "RAG 问答"
+  },
+  {
+    "id": "T12",
+    "session_id": "eval-angry",
+    "message": "你们这什么破服务，再不处理我就投诉了！",
+    "expected_intent": "complaint",
+    "expected_tool": "transfer_human",
+    "scenario": "情绪安抚"
+  },
+  {
+    "id": "T13",
+    "session_id": "eval-signed",
+    "message": "快递显示签收但我没收到怎么办？",
+    "expected_intent": "order_status",
+    "expected_tool": null,
+    "scenario": "查物流"
+  },
+  {
+    "id": "T14",
+    "session_id": "eval-smalltalk",
+    "message": "今天天气真好",
+    "expected_intent": "smalltalk",
+    "expected_tool": null,
+    "scenario": "闲聊"
+  },
+  {
+    "id": "T15",
+    "session_id": "eval-order-abnormal",
+    "message": "订单 2024060412348 物流异常怎么办？",
+    "expected_intent": "order_status",
+    "expected_tool": "query_order",
+    "scenario": "查物流"
+  },
+  {
+    "id": "T16",
+    "session_id": "eval-human",
+    "message": "我要人工客服",
+    "expected_intent": "manual_transfer",
+    "expected_tool": "transfer_human",
+    "scenario": "转人工"
+  },
+  {
+    "id": "T17",
+    "session_id": "eval-smalltalk",
+    "message": "谢谢你",
+    "expected_intent": "smalltalk",
+    "expected_tool": null,
+    "scenario": "闲聊"
+  },
+  {
+    "id": "T18",
+    "session_id": "eval-rag-cc",
+    "message": "CC 降噪耳机适合通勤吗？",
+    "expected_intent": "product_info",
+    "expected_tool": null,
+    "scenario": "RAG 问答"
+  },
+  {
+    "id": "T19",
+    "session_id": "eval-warranty",
+    "message": "发票丢了还能保修吗？",
+    "expected_intent": "warranty",
+    "expected_tool": null,
+    "scenario": "RAG 问答"
+  },
+  {
+    "id": "T20",
+    "session_id": "eval-repair",
+    "message": "订单 2024060512349 想维修",
+    "expected_intent": "return_exchange",
+    "expected_tool": "create_ticket",
+    "scenario": "退换货"
+  }
+]

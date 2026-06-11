@@ -1,0 +1,42 @@
+[
+  {
+    "order_id": "2024060112345",
+    "product": "XX 蓝牙耳机",
+    "status": "已发货，正在派送前中转",
+    "express": "顺丰快递",
+    "tracking_no": "SF1234567890",
+    "eta": "明天 18:00 前送达"
+  },
+  {
+    "order_id": "2024060212346",
+    "product": "YY 游泳耳机",
+    "status": "已签收",
+    "express": "京东物流",
+    "tracking_no": "JD9876543210",
+    "eta": "6 月 1 日已签收"
+  },
+  {
+    "order_id": "2024060312347",
+    "product": "CC 降噪耳机",
+    "status": "仓库拣货中",
+    "express": "中通快递",
+    "tracking_no": "待生成",
+    "eta": "预计今天 22:00 前发货"
+  },
+  {
+    "order_id": "2024060412348",
+    "product": "XX 蓝牙耳机",
+    "status": "运输异常，快递站点滞留",
+    "express": "圆通快递",
+    "tracking_no": "YT2468135790",
+    "eta": "需人工核查后确认"
+  },
+  {
+    "order_id": "2024060512349",
+    "product": "YY 游泳耳机",
+    "status": "已出库，等待揽收",
+    "express": "顺丰快递",
+    "tracking_no": "SF2468013579",
+    "eta": "预计 24 小时内更新揽收轨迹"
+  }
+]
